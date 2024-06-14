@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaves Management System</title>
+    <link rel="stylesheet" href="leaves management system .css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#dashboard" onclick="showSection('dashboard')">Dashboard</a></li>
+            <li><a href="#apply-leave" onclick="showSection('apply-leave')">Apply for Leave</a></li>
+            <li><a href="#leave-list" onclick="showSection('leave-list')">Leave List</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div id="dashboard" class="section active">
+            <h2>Dashboard</h2>
+            <p>Welcome to the Leaves Management System</p>
+        </div>
+        <div id="apply-leave" class="section">
+            <h2>Apply for Leave</h2>
+            <form id="leaveForm">
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" name="start-date" required>
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date" name="end-date" required>
+                <label for="reason">Reason:</label>
+                <textarea id="reason" name="reason"></textarea>
+                <span id="reason-error" style="display:none;"></span><br>
+                <button type="submit">Apply</button>
+            </form>
+        </div>
+        <div id="leave-list" class="section">
+            <h2>Leave List</h2>
+            <ul id="leaves">
+                
+            </ul>
+        </div>
+    </div>
+    <script src="leaves-management-system.js"></script>
+</body>
+</html>
